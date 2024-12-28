@@ -1,0 +1,287 @@
+/* rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --main-color: #EF9B0F;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+a {
+    text-decoration: none;
+}
+.es-border {
+    position: relative;
+}
+
+.es-border::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 28px;
+    transition: width .4s;
+    width: 0;
+    border-bottom: solid 3px #fff;
+    transform: translateX(8px);
+}
+
+.es-border:hover::before {
+    width: 59%;
+}
+
+
+.star i {
+    font-size: 25px;
+    color: var(--main-color);
+}
+
+.star {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.star::before,
+.star::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    background-color: var(--main-color);
+    top: 11px;
+}
+
+.star::before {
+    left: 50px;
+}
+
+.star::after {
+    right: 50px;
+}
+
+@media (max-width: 767px) {
+
+    .star::before,
+    .star::after {
+        width: 70px;
+    }
+}
+
+/* end rules */
+
+
+/* start navbar */
+
+
+nav.es-navbar {
+    background-color: var(--main-color);
+    color: #fff;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+
+.es-navbar a {
+    color: #fff !important;
+
+}
+
+.menu-items a {
+    font-size: 18px;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+
+
+.es-logo {
+    position: relative;
+    font-size: 28px;
+}
+
+.es-span {
+    position: absolute;
+    bottom: 12px;
+    right: -9px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* end navbar */
+
+
+/* start hero */
+.hero {
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    text-transform: uppercase;
+    font-size: 70px;
+    width: 639px;
+    margin-top: 111px;
+}
+
+.hero h1 span {
+    font-size: 75px;
+    color: var(--main-color);
+}
+
+.hero img {
+    width: 500px;
+    margin-top: 60px;
+}
+
+@media (min-width: 300px) and (max-width: 576px) {
+    .hero {
+        flex-wrap: wrap;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+        text-align: center;
+        width: 250px;
+        max-width: 400px;
+        margin-top: 50px;
+    }
+
+    .hero img {
+        width: 300px;
+        max-width: 400px;
+        margin-top: 60px;
+    }
+    .hero .hero-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero p {
+       text-align: center;
+    }
+    .hero h1 span {
+        font-size: 45px;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 1100px) {
+    .hero {
+        flex-wrap: wrap;
+    }
+}
+
+/* end hero */
+/* start most read section */
+.most-read {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+}
+.most-read h2 {
+    color: var(--main-color);
+}
+.cards-articles 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px
+}
+@media (min-width: 300px) and (max-width: 576px) {
+    .cards-articles {
+        flex-wrap: wrap;
+    }
+}
+button {
+    all: unset;
+}
+.read-btn {
+    width: fit-content;
+    color: #fff;
+    border-radius: 7px;
+    padding: 5px 10px;
+    background-color:  var(--main-color) !important;
+    text-decoration: none;
+}
+
+/* end most read section */
+
+.head-latest-articles {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.head-latest-articles h2 {
+    color: var(--main-color);
+}
+
+
+
+/* start about us */
+.header-about {
+    margin-top: 55px;
+}
+.aboutUs-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* end about us */
+
+
+/* start contact */
+.header-contact {
+    margin-top: 55px;
+}
+.btn-form {
+    background-color: var(--main-color) !important;
+    color: #fff !important;
+} 
+/* end contact */
+
+/* start articles page */
+.header {
+    margin-top: 55px;
+}
+
+@media (min-width: 550px) and (max-width: 750px) {
+    .cards-articles {
+        flex-wrap: wrap;
+    }
+}
+/* end articles page */
+
+/* start article page */
+.header-article {
+    margin-top: 50px;
+}
+/* end article page */
+
